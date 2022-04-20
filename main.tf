@@ -24,3 +24,10 @@ resource "azurerm_resource_group" "myresourcegroup" {
     environment = "Production"
   }
 }
+resource "azurerm_virtual_network" "vnet" {
+  name                = "TFE1"
+  resource_group_name = "TFE1"
+  location            = "canadaeast"
+  address_space       = ["10.254.0.0/20"]
+  
+}
